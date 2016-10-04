@@ -1,6 +1,7 @@
 # LoginApp
 
 This is a maven project Built using Spring 4.3.2.RELEASE
+Import the file using maven Import to run the application
 
 DB Schema Creation file is place under the src >> main >> resource >> LoginApp.sql
 
