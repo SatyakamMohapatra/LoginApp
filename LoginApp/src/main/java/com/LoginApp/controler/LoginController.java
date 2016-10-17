@@ -27,7 +27,7 @@ public class LoginController {
 		System.out.println("[login][loginSucessControler]");
 		String userName = userForm.getUserName();
 		String password = userForm.getPassword();
-		System.out.println(userName+ " "+ password);
+		System.out.println(userName+" "+ password);
 		loginService.Save(userForm);
 		return new ModelAndView("sucess");	
 	}
@@ -36,7 +36,6 @@ public class LoginController {
 	public ModelAndView forgotRedirect(){
 		System.out.println("[forgotRedirect][loginRedirect][]");
 		return new ModelAndView("forgot");
-		
 	}
 	
 }
