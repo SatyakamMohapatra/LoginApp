@@ -24,7 +24,7 @@ public class LoginController {
 
 	@RequestMapping(value="/login", method = RequestMethod.POST)
 	public ModelAndView login(@ModelAttribute("userFrom") userForm userForm){
-		System.err.println("[login][loginSucessControler]");
+		System.out.println("[login][loginSucessControler]");
 		String userName = userForm.getUserName();
 		String password = userForm.getPassword();
 		System.out.println(userName+ " "+ password);
