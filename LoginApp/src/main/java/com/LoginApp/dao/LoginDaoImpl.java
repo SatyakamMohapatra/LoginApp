@@ -3,6 +3,7 @@ package com.LoginApp.dao;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -20,8 +21,8 @@ public class LoginDaoImpl implements LoginDao {
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 		String sql = "INSERT INTO user_info (User_name,User_pwd) VALUES (?,?)";
 		 jdbcTemplate.update(sql,
-					 				form.getUserName(),
-					  				form.getPassword());
+					 		    form.getUserName(),
+					  			form.getPassword());
 		 jdbcTemplate.update(sql,new Object[]{
 				 				form.getUserName(),
 				  				form.getPassword()});
