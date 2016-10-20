@@ -13,11 +13,11 @@ import com.LoginApp.form.userForm;
 public class LoginDaoImpl implements LoginDao {
 	
 
-	@Autowired
-	private DataSource dataSource;
+/*	@Autowired
+	private DataSource dataSource;*/
 	
 	@Override
-	public void Save(userForm form) {
+	public void Save(userForm form) {/*
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 		String sql = "INSERT INTO user_info (User_name,User_pwd) VALUES (?,?)";
 		 jdbcTemplate.update(sql,
@@ -27,7 +27,7 @@ public class LoginDaoImpl implements LoginDao {
 				 				form.getUserName(),
 				  				form.getPassword()});
 		 System.out.println("[LoginDaoImpl][save] New account save status : sucess ");
-	}
+	*/}
 
 	@Override
 	public userForm passwordCheck() {

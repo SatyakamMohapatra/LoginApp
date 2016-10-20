@@ -4,7 +4,9 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -19,8 +21,16 @@ public class LoginController {
 	private LoginService loginService;
 
 	@RequestMapping(value="/", method = RequestMethod.GET)
-	public String Redirect(){
-		System.out.println("[LoginController][Redirect()][]");
+	public String Redirect(Model model){
+		System.out.println("[LoginController][Redirect()][]"); 
+		model.addAttribute("username","satya");
+		return "redirect:/login/{username}";	
+	}
+	
+	@RequestMapping(value="/login/{username}", method = RequestMethod.GET)
+	public String userRedirect(@PathVariable("username") String name){
+		System.out.println("[LoginController][userRedirect()][]"); 
+		System.out.println("this is your name"+name);
 		return "redirect:/login";	
 	}
 	

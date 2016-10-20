@@ -1,5 +1,7 @@
 package com.LoginApp.config;
 
+import javax.sql.DataSource;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -29,8 +31,8 @@ public class WebConfig extends WebMvcConfigurerAdapter{
 		configurer.enable();
 	}
 	
-/*	@Override
+	@Override
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/").setViewName("forward:/NewFile.html");
-    }*/
+    }
 }
