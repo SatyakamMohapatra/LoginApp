@@ -19,9 +19,6 @@ public class LoginDaoImpl implements LoginDao {
 	public void Save(userForm form) {
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 		String sql = "INSERT INTO user_info (User_name,User_pwd) VALUES (?,?)";
-		 jdbcTemplate.update(sql,
-					 		    form.getUserName(),
-					  			form.getPassword());
 		 jdbcTemplate.update(sql,new Object[]{
 				 				form.getUserName(),
 				  				form.getPassword()});
@@ -30,7 +27,6 @@ public class LoginDaoImpl implements LoginDao {
 
 	@Override
 	public userForm passwordCheck() {
-		
 		return null;
 	}
 
